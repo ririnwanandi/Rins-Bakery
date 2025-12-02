@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product - Rin's Bakery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: url('assets/background.jpg') no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    nav {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    nav .nav-link {
+      color: #ffc107 !important;
+      font-weight: bold;
+    }
+
+    nav .nav-link.active,
+    nav .nav-link:hover {
+      color: white !important;
+    }
+
+    .navbar-brand {
+      color: white !important;
+      font-weight: bold;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #d63384;
+      font-weight: bold;
+    }
+
+    .container-content {
+      background-color: rgba(255, 255, 255, 0.92);
+      padding: 40px;
+      border-radius: 20px;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+
+    .product-card {
+      background-color: #fff0f5;
+      border-radius: 15px;
+      padding: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 3px 10px rgba(255, 182, 193, 0.5);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.03);
+    }
+
+    .product-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+
+    .product-card h5 {
+      color: #c2185b;
+      font-weight: bold;
+    }
+
+    .product-card p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .product-price {
+      font-weight: bold;
+      color: #d63384;
+      margin-bottom: 5px;
+    }
+
+    .product-card .bi-cart-plus-fill {
+      margin-left: 8px;
+      color: #28a745;
+      transition: color 0.2s;
+    }
+
+    .product-card .bi-cart-plus-fill:hover {
+      color: #218838;
+    }
+
+    @media (max-width: 768px) {
+      .container-content {
+        padding: 20px;
+        margin: 30px 10px;
+      }
+
+      h2 {
+        font-size: 1.6rem;
+      }
+
+      .product-card img {
+        height: 160px;
+      }
+
+      nav .navbar-collapse {
+        background-color: rgba(0,0,0,0.85);
+        border-radius: 10px;
+        padding: 10px;
+      }
+
+      nav .nav-link {
+        padding: 10px 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Rin's Bakery</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link active" href="products.html">Product</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="order.html">Order</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Konten Produk -->
+  <div class="container container-content">
+    <h2>Daftar Produk Rin's Bakery</h2>
+    <div class="row">
+
+      <!-- Produk Loop -->
+      <!-- Gunakan data dari 1 ke 10 -->
+      <!-- Contoh Produk -->
+      <!-- Ganti detail produk sesuai kebutuhan -->
+
+      <!-- Mulai Looping Produk -->
+      <script>
+        const products = [
+          {
+            name: "Strawberry Delight",
+            price: "Rp 170.000",
+            desc: "Kue stroberi segar dengan krim lembut dan tampilan imut.",
+            img: "https://i.pinimg.com/474x/b9/9a/28/b99a28beb874001690cb2b182bab1d21.jpg"
+          },
+          {
+            name: "Red Velvet Cake",
+            price: "Rp 150.000",
+            desc: "Red Velvet lembut dengan rasa cokelat ringan dan krim keju.",
+            img: "https://i.pinimg.com/474x/09/2f/a7/092fa79b4b8e3a6a2a1d68de401e0cdc.jpg"
+          },
+          {
+            name: "Vanilla Dream",
+            price: "Rp 180.000",
+            desc: "Vanilla klasik dengan taburan gula salju, cocok untuk segala suasana.",
+            img: "https://i.pinimg.com/474x/ff/ee/89/ffee896d8983dd288ca6b9432d3c4c7b.jpg"
+          },
+          {
+            name: "Mini Cupcake",
+            price: "Rp 50.000",
+            desc: "Cupcake mini dengan topping warna-warni yang disukai anak-anak.",
+            img: "https://i.pinimg.com/474x/a0/c2/14/a0c214acc2b5d7cf2ce137e550b2b34f.jpg"
+          },
+          {
+            name: "Colorful Macarons",
+            price: "Rp 40.000",
+            desc: "Macaron cantik dengan berbagai rasa: vanilla, cokelat, matcha, dan lainnya.",
+            img: "https://i.pinimg.com/474x/1f/bc/f1/1fbcf18eeaf82db83c919368e012c099.jpg"
+          },
+          {
+            name: "Black Forest Cake",
+            price: "Rp 150.000",
+            desc: "Kue klasik dengan ceri, krim, dan cokelat parut khas Jerman.",
+            img: "https://i.pinimg.com/736x/6c/9c/2e/6c9c2e7afd21ca31621d929db085fb4c.jpg"
+          },
+          {
+            name: "Oreo Cheesecake",
+            price: "Rp 120.000",
+            desc: "Gabungan sempurna antara cheesecake lembut dan biskuit oreo renyah.",
+            img: "https://i.pinimg.com/474x/0b/ca/4b/0bca4be2485c3e5d28431fa30a4f6b84.jpg"
+          },
+          {
+            name: "Fruit Paradise",
+            price: "Rp 170.000",
+            desc: "Kue buah segar dengan lapisan jelly dan sentuhan lemon manis.",
+            img: "https://i.pinimg.com/736x/78/52/40/785240a397ec422a5b7c0498a0893fce.jpg"
+          },
+          {
+            name: "Pudding Cake",
+            price: "Rp 120.000",
+            desc: "Gabungan cake dan pudding lembut, rasa karamel dan vanila menggoda.",
+            img: "https://i.pinimg.com/736x/ee/19/a5/ee19a54248b2b3057bceb07544ea0a26.jpg"
+          },
+          {
+            name: "Cake Pop",
+            price: "Rp 60.000",
+            desc: "Kue bola warna-warni di stik, cocok jadi oleh-oleh atau hadiah kecil manis.",
+            img: "https://i.pinimg.com/474x/71/02/8b/71028b8b04a2d011379ece05e64d7173.jpg"
+          }
+        ];
+
+        document.write(products.map(p => `
+          <div class="col-lg-4 col-md-6 col-sm-12">
+            <div class="product-card">
+              <img src="${p.img}" alt="${p.name}" data-bs-toggle="modal" data-bs-target="#productModal" data-bs-image="${p.img}">
+              <h5>${p.name}</h5>
+              <div class="d-flex justify-content-center align-items-center">
+                <div class="product-price">${p.price}</div>
+                <a href="order.html"><i class="bi bi-cart-plus-fill fs-5"></i></a>
+              </div>
+              <p>${p.desc}</p>
+            </div>
+          </div>
+        `).join(''));
+      </script>
+    </div>
+  </div>
+
+  <!-- Modal Bootstrap -->
+  <div class="modal fade" id="productModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content bg-white rounded-4 shadow">
+        <div class="modal-body text-center">
+          <img id="modalImage" src="" alt="Product" class="img-fluid rounded-3" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Script Bootstrap + Modal Handler -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const productModal = document.getElementById('productModal');
+    productModal.addEventListener('show.bs.modal', function (event) {
+      const trigger = event.relatedTarget;
+      const imageUrl = trigger.getAttribute('data-bs-image');
+      const modalImage = document.getElementById('modalImage');
+      modalImage.src = imageUrl;
+    });
+  </script>
+</body>
+</html>
